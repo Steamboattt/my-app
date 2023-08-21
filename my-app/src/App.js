@@ -41,13 +41,18 @@ function App() {
       </div>
       <div className='Erklärungs-Div'>
         <h1 className='Kategorien'>Was ist das überhaupt?</h1>
+        <h1 className='Kategorien'>Über uns</h1>
 
       </div>
 
     </div>
 
     <div className='Impressum-Div'>
+    <img className="logo-Impressum" src="https://firebasestorage.googleapis.com/v0/b/movieapp-test-83d87.appspot.com/o/Logo3.png?alt=media&token=84657e46-c9a9-4d6d-913c-518848acf254"></img>
       <a>Impressum</a>
+      <a>Über uns</a>
+      <a>Team</a> 
+      <a>AGB</a>
     </div>
     </div>
   );
