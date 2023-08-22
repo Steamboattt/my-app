@@ -47,13 +47,24 @@ function App() {
 
     </div>
 
-    <div className='Impressum-Div'>
+
+    <div className="Impressum-Div">
     <img className="logo-Impressum" src="https://firebasestorage.googleapis.com/v0/b/movieapp-test-83d87.appspot.com/o/Logo3.png?alt=media&token=84657e46-c9a9-4d6d-913c-518848acf254"></img>
-      <a>Impressum</a>
-      <a>Über uns</a>
-      <a>Team</a> 
-      <a>AGB</a>
+  <nav>
+    <div className="column">
+      <a href="#">Impressum</a>
+      <a href="#">Über uns</a>
+      <a href="#">Hilfe</a>
     </div>
+    <div className="column">
+      <a href="#">Team</a> 
+      <a href="#">AGB</a>
+      <a href="#">häufig gestellte Fragen</a>
+    </div>
+  </nav>
+</div>
+
+
     </div>
   );
 }
