@@ -2,9 +2,21 @@
 import './App.css';
 import { TypeAnimation } from 'react-type-animation';
 import CircleWithImage from './Jsx-Components/CircleWithImage';
+import {motion,useInView, useAnimation,variants} from "framer-motion";
+import { useEffect, useRef } from 'react';
 
 
 function App() {
+const mainControls = useAnimation();
+const ref = useRef(null);
+const isInView = useInView(ref, {once:true})
+
+useEffect(() =>{
+  if (isInView){
+    mainControls.start("visible");
+  
+  }
+},[isInView]);
 
 
   return (
@@ -69,14 +81,23 @@ function App() {
 
         <button className='button-87'>Jetzt starten</button>
       </div>
-      <div className='Erklärungs-Div'>
-        <h1 className='Kategorien'>Was ist das überhaupt?</h1>
+      <div ref={ref}  className='Erklärungs-Div'>
+        <motion.div variants={{hidden:{opacity: 0, y:75}, visible: {opacity: 1, y:0},}}
+        initial="hidden"
+        animate={mainControls}
+        transition={{duration:0.5, delay: 0.25}}
+        >
+                  <h1 className='Kategorien'>Was ist das überhaupt?</h1>
+
+          <a>TEST</a>
+
+        </motion.div>
         <h1 className='Kategorien'>Über uns</h1>
 
       </div>
 
     </div>
-
+     
 
     <div className="Impressum-Div">
     <img className="logo-Impressum" src="https://firebasestorage.googleapis.com/v0/b/movieapp-test-83d87.appspot.com/o/Logo3.png?alt=media&token=84657e46-c9a9-4d6d-913c-518848acf254"></img>

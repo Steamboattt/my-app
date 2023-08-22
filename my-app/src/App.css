@@ -269,4 +269,27 @@ visibility: hidden;
      font-weight: bold;
      font-size: smaller;
    }
+   nav {
+    margin-left: -30%;
+    display: flex; /* Um die Links nebeneinander anzuordnen */
+    gap: 1%; /* Abstand zwischen den Spalten */
+  }
+  .logo-Impressum {
+    position: relative;
+   margin-top: -80px;
+   margin-left: -5%;
+    max-width: 80px; /* Maximalbreite des Logos */
+  }
+  .column {
+    padding-left: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Abstand zwischen den Links in einer Spalte */
+  }
+  .column1 a{
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+
 }
