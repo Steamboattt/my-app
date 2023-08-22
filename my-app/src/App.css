@@ -101,29 +101,32 @@
 .Angebot-Div {
   width: 70%;
   margin-top: 20px;
+  margin-bottom: 40px; /* Hier wird der Abstand zum nächsten div vergrößert */
   padding: 20px;
   background-color: rgb(186, 184, 246);
   display: flex;
   flex-direction: column;
-  align-items: center;
   border-radius: 8px;
-  box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.847);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 2px 28px 47px 4px rgba(0,0,0,0.62); 
+  box-shadow: 0px 10px 13px -7px #000000, 2px 28px 47px 4px rgba(0,0,0,0.62);
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.Angebot-Div:hover {
+  box-shadow: 0px 10px 13px -7px #000000, 2px 28px 47px 4px rgba(0, 0, 0, 0.942);
 }
 
 .Angebot-Div a {
   margin-bottom: 10px;
 }
-
-.Angebot-Div button {
-  background-color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
+.Angebot-Div h3 {
+ margin-top: 0%;
+ text-align: center;
+ text-decoration:underline; 
 }
+
 .Kategorien{
   text-align: center;
+  color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 50px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
 }
 .Impressum-Div {
   display: grid;
@@ -147,23 +150,78 @@ nav {
   display: flex; /* Um die Links nebeneinander anzuordnen */
   gap: 10%; /* Abstand zwischen den Spalten */
 }
-
+.Angebot-Div nav{
+  display: flex;
+  margin-left: -0%;
+  gap: 20%; 
+}
 .column {
   padding-left: 25%;
   display: flex;
   flex-direction: column;
   gap: 30px; /* Abstand zwischen den Links in einer Spalte */
 }
+.column1 {
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Abstand zwischen den Links in einer Spalte */
+}
+.column1 a{
+  color: black;
+}
 
 nav a {
   text-decoration: none;
   color: white;
+}
+.button-87 {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  width: 70%;
+  align-self: center;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-87:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-87:active {
+  transform: scale(0.95);
+}
+.punkt {
+  display: flex;
+  gap: 5px;
 }
 
 @media (max-width: 850px) {
   .circle-container {
 visibility: hidden;
   }
+  .Angebot-Div nav{
+    display: flex;
+    margin-left: -0%;
+    gap: 5%; 
+  }
+
   .Überschrift_Animiert{
     font-size: 30px;
 
@@ -183,7 +241,7 @@ visibility: hidden;
     border-radius: 10px 10px 0 0;
     height: 100px;
     min-height: 240px;
-    border-bottom-left-radius: 60%;
+    border-bottom-left-radius: 20%;
     border-bottom-right-radius: 60%;
   }
   .logo{

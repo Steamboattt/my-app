@@ -29,15 +29,45 @@ function App() {
     </div>
 
     <div className='Angebote-Div'>
-      <h1 className='Kategorien'>Kategorien</h1>
+
+
       <div className='Angebot-Div'>
-        <a>Kostenlose Variante</a>
-        <button>Jetzt starten</button>
+        <h3>Kostenlose Variante</h3>
+        <nav>
+        <div className='column1'>
+          <a>❌Alle Themen</a>
+          <a>❌Individualisierbar</a>
+        </div>
+        <div className='column1'>
+          <a>✔️Anmeldung</a>
+          <a>✔️Grundkenntnisse</a>
+        </div>
+        <div className='column1'>
+          <a>❌Speichern</a>
+          <a>❌Alle Features</a>
+        </div>
+        </nav>
+        <button className='button-87'>Jetzt starten</button>
       </div>
 
       <div className='Angebot-Div'>
-        <a>Kostenpflichtige Variante</a>
-        <button>Jetzt starten</button>
+        <h3>Kostenpflichtige Variante</h3>
+        <nav>
+        <div className='column1'>
+          <a>✔️Alle Themen</a>
+          <a>✔️Individualisierbar</a>
+        </div>
+        <div className='column1'>
+          <a>✔️Anmeldung</a>
+          <a>✔️Grundkenntnisse</a>
+        </div>
+        <div className='column1'>
+          <a>✔️Speichern</a>
+          <a>✔️Alle Features</a>
+        </div>
+        </nav>
+
+        <button className='button-87'>Jetzt starten</button>
       </div>
       <div className='Erklärungs-Div'>
         <h1 className='Kategorien'>Was ist das überhaupt?</h1>
@@ -59,7 +89,7 @@ function App() {
     <div className="column">
       <a href="#">Team</a> 
       <a href="#">AGB</a>
-      <a href="#">häufig gestellte Fragen</a>
+      <a href="#">häufig gestellte Fragen </a>
     </div>
   </nav>
 </div>
