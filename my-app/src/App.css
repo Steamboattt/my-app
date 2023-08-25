@@ -1,3 +1,51 @@
+
+.Login_Form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  background-color: whitesmoke;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  /*Class-Effect*/
+  background: rgba(255, 255, 255, 0.52);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+.Login_Form label{
+  color: black;
+}
+.curved{
+  background-image: linear-gradient(45deg, #fa3c17 0%, #f09619e9  51%, #fd6648  100%);
+  color: white;
+  text-align: center;
+ 
+}
+
+.curved h1{
+  font-size: 6rem;
+  font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top:0;
+}
+
+.curved p{
+font-size: 1rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0 5rem 0 5rem;
+}
+.curved svg{
+  display: block;
+}
 .first-Div{
   display: flex;
   background-color: rgb(235, 243, 253);
@@ -369,7 +417,11 @@ visibility: hidden;
     font-weight: bold;
   }
 
-
+  .Login_Form {
+    backdrop-filter: blur(0px);
+    width: 70%;
+    height: 50%;
+  }
 }
 
 @media (min-width: 1501px) {
