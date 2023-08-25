@@ -103,30 +103,34 @@ useEffect(() =>{
       <div ref={ref}  className='Erklärungs-Div'>
 
 
-        <motion.div variants={{hidden:{opacity: 0, y:75}, visible: {opacity: 1, y:0},}}
+        <motion.div  variants={{hidden:{opacity: 0, }, visible: {opacity: 1},}}
         initial="hidden"
         animate={mainControls}
-        transition={{duration:0.5, delay: 0.25}}
+        transition={{duration:0.5, delay:0.5}}
         >
 
-      
-
-
                   <h1 className='Kategorien'>Was ist das überhaupt?</h1>
-                  <div style={{ display: 'flex', alignItems: 'center', width:"90%" }}>
-                    <Lottie style={{ width: '20%' }} animationData={salesman} />
-                    <p style={{ marginLeft: '10px', textAlign: 'center', flex: 1 }}>Unsere Webseite bietet eine umfassende Ressource zum Thema Internet-Führerschein, konzipiert insbesondere für neue Internetnutzer, darunter ältere Erwachsene und Kinder. Unser Hauptziel ist es, Ihnen dabei zu helfen, die essenziellen Grundkenntnisse über die sichere Nutzung des Internets zu erlernen. In der heutigen digitalen Welt ist es von entscheidender Bedeutung, sich der potenziellen Gefahren bewusst zu sein und zu wissen, wie man sich davor schützen kann. Unsere gut strukturierten Lektionen vermitteln auf verständliche Weise, wie Sie Ihre persönlichen Daten schützen, vertrauenswürdige Online-Quellen identifizieren und sich vor betrügerischen Aktivitäten im Internet absichern können. Ihre neu erworbenen Kenntnisse können Sie in einem abschließenden Test unter Beweis stellen, der Ihnen die Möglichkeit gibt, Ihr Verständnis zu überprüfen. Bei erfolgreichem Abschluss des Tests erhalten Sie ein Zertifikat, das Ihre Bemühungen um die Entwicklung eines sicheren und sachkundigen Umgangs mit dem Internet würdigt. Wir laden Sie ein, unsere Webseite zu erkunden und Ihre Reise zum Internet-Führerschein zu beginnen.</p>
+                  <div className='Kategorie'>
+                    
+                    <Lottie className='Lottie'  animationData={salesman} />
+                  
+                    <div style={{ display: 'flex', alignItems: 'center', width:"70%" }}>
+                    <p  style={{width:'50%', marginLeft: '10px', textAlign: 'justify', flex: 1 }}>Diese Webseite bietet eine umfassende Ressource zum Thema Internet-Führerschein, konzipiert insbesondere für neue Internetnutzer, darunter ältere Erwachsene und Kinder. Unser Hauptziel ist es, Ihnen dabei zu helfen, die essenziellen Grundkenntnisse über die sichere Nutzung des Internets zu erlernen. In der heutigen digitalen Welt ist es von entscheidender Bedeutung, sich der potenziellen Gefahren bewusst zu sein und zu wissen, wie man sich davor schützen kann. Unsere gut strukturierten Lektionen vermitteln auf verständliche Weise, wie Sie Ihre persönlichen Daten schützen, vertrauenswürdige Online-Quellen identifizieren und sich vor betrügerischen Aktivitäten im Internet absichern können. Ihre neu erworbenen Kenntnisse können Sie in einem abschließenden Test unter Beweis stellen, der Ihnen die Möglichkeit gibt, Ihr Verständnis zu überprüfen. Bei erfolgreichem Abschluss des Tests erhalten Sie ein Zertifikat, das Ihre Bemühungen um die Entwicklung eines sicheren und sachkundigen Umgangs mit dem Internet würdigt. Wir laden Sie ein, unsere Webseite zu erkunden und Ihre Reise zum Internet-Führerschein zu beginnen.</p>
+                    </div>
                   </div>
 
 
         </motion.div>
 
-
         <h1 className='Kategorien'>Über mich</h1>
-                  <div style={{ display: 'flex', alignItems: 'center',}}>
-                    <Lottie style={{ width: '20%' }} animationData={me} />
-                    <p style={{ marginLeft: '10px', textAlign: 'center', flex: 1 }}>TestText</p>
+                  <div style={{ backgroundColor:"white", display: 'flex', alignItems: 'center', width:"100%" }}>
+                    <Lottie className='Lottie' animationData={me} />
+                    <div style={{ display: 'flex', alignItems: 'center', width:"70%" }}>
+                    <p style={{width:'50%', marginLeft: '10px', textAlign: 'justify', flex: 1 }}>Hey, mein Name ist Lukas, ich bin 28 Jahre und studiere Wirtschaftsinformatik und bin nebenberuflich als Programmierer tätig. Mein Ziel ist es mit dieser Website vorallem Menschen die neu im Internet sind vor Gefahren zu bewahren, aber auch Menschen die sich einfach über Gefahren im Internet auseinandersetzen möchten. Ich hatte viel Spaß beim programmieren der Website und hoffe auch das du viel Spaß beim benutzen hast.</p>
+                    </div>
                   </div>
+
+
       </div>
 
     </div>

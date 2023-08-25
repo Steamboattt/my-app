@@ -20,8 +20,21 @@
   border-bottom-left-radius:45%;
   border-bottom-right-radius: 60%;
 }
-
-
+.Kategorie{
+  border-radius: 30px 10px 50px 90px;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 40%;
+  border-top-left-radius: 90%;
+  border-top-right-radius: 20%;
+  min-height: 400px;
+  background-image: linear-gradient(45deg, #FF512F 0%, #f09619e9 51%, #ff522f24 100%);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.Kategorie p{
+  font-size: 100%;
+}
 .logo{
   width: 110px;
   height: 70px;
@@ -257,8 +270,19 @@ p {
   object-fit: cover;
   clip-path: polygon(0 0, 100% 0, 50% 100%); /* Bild auf das Dreieck zuschneiden */
 }
-
+.Lottie{
+  width:20%;
+}
 @media (max-width: 850px) {
+  .Erklärungs-Div{
+    display: none;
+  }
+  .Lottie{
+    visibility: hidden;
+  }
+  p{
+    font-size: small;
+  }
   .untergrund-Div {
      height: 100px;
     min-height: 242px;
