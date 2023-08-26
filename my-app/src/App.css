@@ -7,7 +7,7 @@
   right: 0;
   margin: auto;
   width: 500px;
-  height: 300px;
+  height: 500px;
   background-color: whitesmoke;
   align-items: center;
   display: grid;
@@ -21,16 +21,32 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10.3px);
   border: 1px solid rgba(255, 255, 255, 0.24);
+  z-index: 300;
 }
 .Login_Form label{
   color: black;
 }
+.Login_Form a{
+  color: black;
+  font-weight: bold ;
+  font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .curved{
-  background-image: linear-gradient(45deg, #fa3c17 0%, #f09619e9  51%, #fd6648  100%);
+  background-image: linear-gradient(45deg, #ffffff 0%, #ffffffe9  51%, #ffffff  100%);
   color: white;
   text-align: center;
- 
+  
 }
+.hr-modern {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+}
+
 
 .curved h1{
   font-size: 6rem;
@@ -43,8 +59,9 @@ font-size: 1rem;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 margin: 0 5rem 0 5rem;
 }
-.curved svg{
-  display: block;
+.curved svg {
+  width: 100%; /* Oder die gewünschte Breite */
+  height: auto; 
 }
 .first-Div{
   display: flex;
