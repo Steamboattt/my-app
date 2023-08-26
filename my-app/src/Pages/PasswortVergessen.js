@@ -1,6 +1,6 @@
 import { Link} from 'react-router-dom';
 
-export const Login = () => {
+export const PasswortVergessen = () => {
     function handleLogoClick() {}
 
     return (
@@ -20,7 +20,7 @@ export const Login = () => {
                 />
             </Link>
 
-            <h1  className='login-headline'>Login</h1>
+            <h1 className='login-headline'>Passwort vergessen</h1>
             <form style={{alignItems:"center"}} className="Login_Form">
                
                 <img
@@ -30,14 +30,13 @@ export const Login = () => {
                 />
              
                 <a className="ErrorLogin" />
-                <label>Email-Adresse</label>
+                <label>Bitte gebe deine Email-Adresse zu deinen Account ein</label>
                 
                 <input className="input-field" name="email" placeholder="email" type="email" />
-                <label>Password</label>
-                <input className="input-field" name="password" placeholder="password" type="password" />
 
-                <button style={{marginLeft:"30px"}} className='button-87' type="submit">
-                    Einloggen
+
+                <button style={{marginLeft:"15%"}} className='button-87' type="submit">
+                    Passwort zurücksetzen
                 </button>
                 <a href='/Help'>Passwort vergessen?</a>
                 <a href='Signup'>Kostenlosen Account erstellen</a>

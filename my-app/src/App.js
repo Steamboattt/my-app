@@ -4,6 +4,9 @@ import {BrowserRouter as Router,Route,Link,Redirect,Switch} from 'react-router-d
 import { AuthContextProvider, useAuthState } from './firebase';
 import {Startseite} from "./Pages/Startseite";
 import { Login } from './Pages/Login';
+import { Signup } from './Pages/Signup';
+import { PasswortVergessen } from './Pages/PasswortVergessen';
+
 
 
 function App() {
@@ -50,6 +53,8 @@ function App() {
         <AuthenticatedRoute path="/Test" component={Startseite}></AuthenticatedRoute>
         <UnauthenticatedRoute exact path="/" component={Startseite}></UnauthenticatedRoute>
         <UnauthenticatedRoute exact path="/Login" component={Login}></UnauthenticatedRoute>
+        <UnauthenticatedRoute exact path="/Signup" component={Signup}></UnauthenticatedRoute>
+        <UnauthenticatedRoute exact path="/Help" component={PasswortVergessen}></UnauthenticatedRoute>
         </Switch>
       </Router>
     </AuthContextProvider>
