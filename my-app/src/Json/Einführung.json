@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "page": 1,
+        "Title": "Inhalte",
+        "Text": "Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2 Test1 Test2",
+        "svg": "animation_lltrwi12.json"
+    },
+    {
+        "id": 1,
+        "page": 2,
+        "Title": "Einführung",
+        "Text": "TEST 2 TEST 3 TEST 4",
+        "svg": "animation_llp8xi8a.json"
+    } 
+
+]

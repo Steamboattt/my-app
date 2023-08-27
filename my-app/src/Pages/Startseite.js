@@ -9,7 +9,7 @@ import { useEffect, useRef , useState} from 'react';
 import {BasisCurve} from "react-svg-curve";
 import CircleWithImage from '../Jsx-Components/CircleWithImage';
 import salesman from "../Json/business-salesman.json";
-
+import { Link} from 'react-router-dom';
 
 export const Startseite = () => {
 
@@ -32,6 +32,7 @@ useEffect(() =>{
     slideControls.start("visible");
   }
 },[isInView]);
+
 
 
   return (
@@ -80,7 +81,10 @@ useEffect(() =>{
           <a>❌Alle Features</a>
         </div>
         </nav>
-        <button className='button-87'>Jetzt starten</button>
+        <Link className="Link" to="/kostenloseVariante">
+          <button className='button-87'>Jetzt starten</button>
+        </Link>
+
       </div>
 
       <div className='Angebot-Div'>

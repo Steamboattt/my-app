@@ -6,6 +6,7 @@ import {Startseite} from "./Pages/Startseite";
 import { Login } from './Pages/Login';
 import { Signup } from './Pages/Signup';
 import { PasswortVergessen } from './Pages/PasswortVergessen';
+import { KostenloseVariante } from './Pages/KostenloseVariante';
 
 
 
@@ -51,6 +52,7 @@ function App() {
       <Router>
       <Switch>
         <AuthenticatedRoute path="/Test" component={Startseite}></AuthenticatedRoute>
+        <UnauthenticatedRoute exact path="/KostenloseVariante" component={KostenloseVariante}></UnauthenticatedRoute>
         <UnauthenticatedRoute exact path="/" component={Startseite}></UnauthenticatedRoute>
         <UnauthenticatedRoute exact path="/Login" component={Login}></UnauthenticatedRoute>
         <UnauthenticatedRoute exact path="/Signup" component={Signup}></UnauthenticatedRoute>
