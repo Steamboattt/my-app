@@ -3,32 +3,50 @@ import Lottie from "lottie-react";
 import Test from "../Json/animation_lltrwi12.json";
 import Woman from "../Json/ProfileWoman.json";
 import ProfileMen from "../Json/ProfileMen.json";
-import ProfileOther from "../Json/ProfileOther.json";
-const ErklärungsCard = (probs) => {
+import ProfileOther from "../Json/ProfileOther4.json";
+import ProfileWoman2 from "../Json/ProfileWoman2.json";
+import {motion,useInView, useAnimation,variants} from "framer-motion";
+const ErklärungsCard = ({ onButtonClicked }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedOption, setSelectedOption] = useState('');
-  const [name, setName] = useState('');
+  const [vorname, setVorname] = useState('');
+  const [animationState, setAnimationState] = useState("visible");
+
   const nextPage = () => {
+   
+    if (currentPage === 2){
+      setAnimationState("thirdAnimation");
+    }
+
     setCurrentPage(currentPage + 1);
+   
   };
+
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
- 
 
+
+
+  const variants = {
+    open: { scaleX: 0 }, 
+    visible: { scaleX: 1 },
+    thirdAnimation: { opacity: 1, scaleX: 1,y:-35 }
+  };
+  
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
   const handleNameChange = (event) => {
-    setName(event.target.value);
+    setVorname(event.target.value);
   }
   return ( 
-    <div className="Erklärungscard-Div">
+    <div  className="Erklärungscard-Div">
           {currentPage === 1?
           <div className="container">
       <h1>Über dich</h1>
-  
+
       <div className="radio-group">
         <label className="radio">
           <input
@@ -37,7 +55,7 @@ const ErklärungsCard = (probs) => {
             checked={selectedOption === 'option1'}
             onChange={handleOptionChange}
           />
-          Mrs.
+          Frau
         </label>
         <label className="radio">
           <input
@@ -46,7 +64,7 @@ const ErklärungsCard = (probs) => {
             checked={selectedOption === 'option2'}
             onChange={handleOptionChange}
           />
-          Mr.
+          Herr
         </label>
         <label className="radio">
           <input
@@ -55,13 +73,14 @@ const ErklärungsCard = (probs) => {
             checked={selectedOption === 'option3'}
             onChange={handleOptionChange}
           />
-          other
+          Divers
         </label>
        
       </div>
-      <h3 style={{marginTop:"50px"}}>Bitte trage dein Namen ein</h3>
+      <h3 style={{marginTop:"50px"}}>Vorname</h3>
 
-      <input style={{width:"50%"}} onChange={handleNameChange}  placeholder='Max Mustermann' className="input-field"></input>
+      <input style={{width:"50%"}} onChange={handleNameChange}  placeholder='Max' className="input-field"></input>
+
     </div>
 
     :<></>}
@@ -69,7 +88,7 @@ const ErklärungsCard = (probs) => {
       {currentPage === 2?
       
       <div>
-        <h1>Hi {name},</h1>
+        <h1>Hi {vorname},</h1>
         <h3>Hier schonmal ein kurzen Überblick über die Themen die behandelt werden</h3>
         <ul style={{fontWeight:"bold",paddingLeft:"10px"}} className="list">
         <li>Was sind Links</li>
@@ -85,28 +104,28 @@ const ErklärungsCard = (probs) => {
       <div>
         <h1>Es kann losgehen</h1>
         <h3>Du kannst dir übrigens kostenlos ein Account erstellen, falls du dein Fortschritt speichern möchtest...</h3>
-        <a href='/Signup'>Jetzt Account erstellen</a>
-        <button style={{zIndex:"4",position:"absolute", right:"0px",bottom:"0px",width:"15%",minWidth:"150px"}} className='button-87'>Weiter</button>
+        <a href='/Signup'>Jetzt kostenlos Account erstellen</a>
+        <motion.button onClick={onButtonClicked} initial={{scaleX:0}} animate={{scaleX:1}} style={{ zIndex: "4", position: "absolute", bottom: "0px", left: "-6px", right: "0", width: "98%", minWidth: "150px", height: "50px" }} className='button-87'>Weiter</motion.button>
+
       </div>
 
       
       :<></>}
 
-      <p className='Seitenanzahl'>{currentPage} / 3 </p>        
-      <Lottie style={selectedOption === 'option2' || selectedOption === ''|| selectedOption === 'option3'?{minWidth:"350px",maxWidth:"400px"}:{minWidth:"250px"}} className='Lottie-Erklärungsdiv'  animationData={selectedOption === 'option1'?Woman:selectedOption === 'option2'?ProfileMen:ProfileOther }  />
-
+      <p className='Seitenanzahl'>{currentPage} / 3 </p>    
+      <motion.div variants={variants} style={{ position: "absolute", bottom: "0px", left: "50%" }} initial={{scaleX:0,y:0}} animate={animationState} >
+        <Lottie style={selectedOption === 'option2' || selectedOption === ''|| selectedOption === 'option3'?{minWidth:"300px",maxWidth:"300px"}:{minWidth:"300px"}} className='Lottie-Erklärungsdiv'  animationData={selectedOption === 'option1'?ProfileWoman2:selectedOption === 'option2'?ProfileMen:ProfileOther }  />
+      </motion.div>   
         
-    
 
-
-    {currentPage != 3 && name.length >= 3?
+    {currentPage != 3 && vorname.length >= 3?
       <div className="Pfeil-Right" onClick={nextPage}>
       <img style={{width:"100px"}} src='https://www.pngmart.com/files/15/Arrow-PNG-Free-Download.png'></img>
        
       </div>
       :<></>
       }
-      {currentPage != 1?
+      {currentPage != 1 && currentPage < 3  ?
       <div className="Pfeil-Left" onClick={previousPage}>
        
        <img style={{ width: "100px", transform: "scaleX(-1)" }} src='https://www.pngmart.com/files/15/Arrow-PNG-Free-Download.png' alt="Spiegelbild"></img>
